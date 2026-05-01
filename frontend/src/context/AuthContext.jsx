@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const AuthContext = createContext(null);
 
-const API_BASE = 'http://localhost:5000/api/auth';
+const API_BASE = import.meta.env.VITE_API_URL || 'https://expanse-tracker-1-2txk.onrender.com/api/auth';
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);

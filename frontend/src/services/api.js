@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE = 'http://localhost:5000/api/expenses';
+const API_BASE = import.meta.env.VITE_API_URL || 'https://expanse-tracker-1-2txk.onrender.com/api/expenses';
 
 // Create a new expense (with idempotency key)
 export const createExpense = async (expenseData) => {
